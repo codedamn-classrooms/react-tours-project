@@ -12,7 +12,10 @@ const Tour = (props) => {
 					<h4 className="tour-price">${price}</h4>
 				</div>
 				{/* make modifications here */}
-				<p>{info}</p>
+				<p>
+					{info}
+					<button>read more</button>
+				</p>
 				<button className="delete-btn">Not Interested</button>
 			</footer>
 		</article>
