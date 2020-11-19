@@ -10,6 +10,9 @@ function App() {
 
 	function removeTour(tourID) {
 		// add logic to update state for tour removal
+		setTours((tours) => {
+			return tours.filter((tour) => tour.id !== tourID)
+		})
 	}
 
 	async function fetchTours() {

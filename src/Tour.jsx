@@ -13,7 +13,6 @@ const Tour = (props) => {
 					<h4>{name}</h4>
 					<h4 className="tour-price">${price}</h4>
 				</div>
-				{/* make modifications here */}
 				<p>
 					{readMore ? `${info.substring(0, 200)}...` : info}{' '}
 					<button onClick={() => setReadMore((state) => !state)}>
@@ -21,7 +20,9 @@ const Tour = (props) => {
 					</button>
 				</p>
 				{/* add click listener to this button passing id */}
-				<button className="delete-btn">Not Interested</button>
+				<button className="delete-btn" onClick={() => removeTour(id)}>
+					Not Interested
+				</button>
 			</footer>
 		</article>
 	)
