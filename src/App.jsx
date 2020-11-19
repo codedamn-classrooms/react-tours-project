@@ -32,9 +32,11 @@ function App() {
 		)
 	}
 
-	return tours.map((tour) => {
-		return <h2>{tour.name}</h2>
-	})
+	return (
+		<main>
+			<Tours tours={tours} />
+		</main>
+	)
 }
 
 export default App
