@@ -34,7 +34,8 @@ function App() {
 
 	return (
 		<main>
-			<Tours tours={tours} />
+			{/* send tours here */}
+			<Tours tours={[]} />
 		</main>
 	)
 }
