@@ -9,7 +9,14 @@ function App() {
 
 	async function fetchTours() {
 		// write code to fetch tours here
+		const data = await fetch(url)
+		const jsonData = await data.json()
+		setTours(jsonData)
 	}
+
+	useEffect(() => {
+		fetchTours()
+	}, [])
 
 	return tours.map((tour) => {
 		return <h2>{tour.name}</h2>
