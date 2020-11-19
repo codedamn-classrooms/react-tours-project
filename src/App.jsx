@@ -6,17 +6,25 @@ const url = 'https://course-api.com/react-tours-project'
 
 function App() {
 	const [tours, setTours] = useState([])
+	const [loading, setLoading] = useState(true)
 
 	async function fetchTours() {
-		// write code to fetch tours here
+		// set loading to true here
+
 		const data = await fetch(url)
 		const jsonData = await data.json()
 		setTours(jsonData)
+
+		// set loading to false here
 	}
 
 	useEffect(() => {
 		fetchTours()
 	}, [])
+
+	if (loading) {
+		return <Loading />
+	}
 
 	return tours.map((tour) => {
 		return <h2>{tour.name}</h2>
