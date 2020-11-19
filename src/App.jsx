@@ -25,7 +25,11 @@ function App() {
 	}, [])
 
 	if (loading) {
-		return <Loading />
+		return (
+			<main>
+				<Loading />
+			</main>
+		)
 	}
 
 	return tours.map((tour) => {
