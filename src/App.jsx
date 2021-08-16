@@ -8,6 +8,10 @@ function App() {
 	const [tours, setTours] = useState([])
 	const [loading, setLoading] = useState(true)
 
+	function removeTour(tourID) {
+		// add logic to update state for tour removal
+	}
+
 	async function fetchTours() {
 		// set loading to true here
 		setLoading(true)
@@ -34,8 +38,12 @@ function App() {
 
 	return (
 		<main>
+<<<<<<< HEAD
 			{/* send tours here */}
 			<Tours tours={[]} />
+=======
+			<Tours tours={tours} removeTour={removeTour} />
+>>>>>>> a7890fb214488320845a71dfdb83b3ad264097a4
 		</main>
 	)
 }
