@@ -38,12 +38,7 @@ function App() {
 
 	return (
 		<main>
-<<<<<<< HEAD
-			{/* send tours here */}
-			<Tours tours={[]} />
-=======
 			<Tours tours={tours} removeTour={removeTour} />
->>>>>>> a7890fb214488320845a71dfdb83b3ad264097a4
 		</main>
 	)
 }
